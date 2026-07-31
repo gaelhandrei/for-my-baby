@@ -61,5 +61,19 @@
 .open .letter {
     transform:translateY(-150px);
 
+  @keyframes fall{
+
+from{
+transform:translateY(-20px);
+opacity:1;
+}
+
+to{
+transform:translateY(100vh);
+opacity:0;
+}
+
+
+
   }
 }
