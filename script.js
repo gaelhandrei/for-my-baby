@@ -19,6 +19,45 @@ function typeWriter()}
     document.getElementById("typing").innerHTML += message.charAt(i);
     i++;
     setTimeout(typeWriter, 45);
+
+function openLetter(){
+
+document.querySelector(".envelope")
+.classList.add("open");
+
+setTimeout(()=>{
+
+document.querySelector(".envelope").style.display="none";
+
+document.getElementById("mainContent")
+.style.display="block";
+
+},1200);
+
+function fallingHearts(){
+
+let heart=document.createElement("div");
+
+heart.innerHTML="❤️";
+
+heart.style.position="fixed";
+heart.style.top="-20px";
+heart.style.left=Math.random()*100+"vw";
+heart.style.fontSize=Math.random()*25+15+"px";
+heart.style.animation="fall 5s linear";
+
+document.body.appendChild(heart);
+
+
+setTimeout(()=>{
+heart.remove();
+},5000);
+
+}
+
+setInterval(fallingHearts,300);  
+
+
   }
 }
 
