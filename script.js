@@ -2,7 +2,7 @@
 
 function openLetter(){
 
-
+ 
 document.querySelector(".envelope")
 .classList.add("open");
 
