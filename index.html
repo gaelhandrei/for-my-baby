@@ -1,22 +1,418 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <title>Happy National Girlfriend Day <3</title>
-  <link rel="stylesheet" href=style.css">
+<title>Happy National Girlfriend Day ❤️</title>
+
+<style>
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #ffb6c1, #ffe4ec);
+    text-align: center;
+    color: #6b1e35;
+    overflow-x: hidden;
+}
+
+
+/* Envelope */
+
+.envelope {
+    width: 260px;
+    height: 170px;
+    background: #ff6f91;
+    margin: 120px auto;
+    position: relative;
+    cursor: pointer;
+    border-radius: 15px;
+}
+
+
+.flap {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 130px solid transparent;
+    border-right: 130px solid transparent;
+    border-top: 100px solid #ff4f81;
+}
+
+
+.letter {
+    background: white;
+    width: 230px;
+    height: 140px;
+    position: absolute;
+    left: 15px;
+    top: 20px;
+    border-radius: 10px;
+    transition: 1s;
+}
+
+
+.envelope:hover .letter {
+    transform: translateY(-50px);
+}
+
+
+.open .letter {
+    transform: translateY(-160px);
+}
+
+
+/* Cards */
+
+.card {
+    background: rgba(255,255,255,0.85);
+    padding: 25px;
+    margin: 20px auto;
+    max-width: 600px;
+    border-radius: 25px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+}
+
+
+button {
+    background: #ff4f81;
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 10px;
+}
+
+
+button:hover {
+    transform: scale(1.1);
+}
+
+
+/* Falling hearts */
+
+.heart {
+    position: fixed;
+    top: -20px;
+    animation: fall linear forwards;
+}
+
+
+@keyframes fall {
+
+from {
+    transform: translateY(-20px);
+    opacity: 1;
+}
+
+to {
+    transform: translateY(100vh);
+    opacity: 0;
+}
+
+}
+
+
+#mainContent {
+    display:none;
+}
+
+
+#finalMessage {
+    display:none;
+    font-size:20px;
+}
+
+
+#noBtn {
+    position: relative;
+}
+
+
+</style>
+
 </head>
- 
+
+
 <body>
-  <div class="envelope" onclick="openLetter()">
+
+
+<!-- Envelope Opening -->
+
+<div class="envelope" onclick="openLetter()">
+
     <div class="flap"></div>
+
     <div class="letter">
 
-      <h3>For My Baby<3</h3>
-      <p>Click me</p>
+        <h3>For My Baby ❤️</h3>
+        <p>Click me 💌</p>
+
     </div>
-  </div>
-  <script src="script.js"></script>
-  <div id="mainContent" style="display:none;">
-    
+
 </div>
+
+
+
+<!-- Main Website -->
+
+
+<div id="mainContent">
+
+
+<div class="card">
+
+<h1>Happy National Girlfriend Day ❤️</h1>
+
+<h2>My Glorious Queen 👑</h2>
+
+<p id="typing"></p>
+
+</div>
+
+
+
+<div class="card">
+
+<h2>Why I Love You ❤️</h2>
+
+<p>
+✨ You make my days happier.</p>
+
+<p>
+✨ You are my comfort person.</p>
+
+<p>
+✨ You make ordinary moments special.</p>
+
+<p>
+✨ I am thankful that I have you.</p>
+
+</div>
+
+
+
+
+<div class="card">
+
+<h2>Our Love Timer ⏳</h2>
+
+<p id="timer"></p>
+
+</div>
+
+
+
+
+
+<div class="card">
+
+<h2>One Last Question 💍</h2>
+
+<h3>Will you keep loving me forever? ❤️</h3>
+
+
+<button onclick="yesAnswer()">
+YES BABY ❤️
+</button>
+
+
+<button id="noBtn"
+onmouseover="moveNo()">
+NO 😭
+</button>
+
+
+<p id="finalMessage">
+
+🥹❤️ I knew you would say yes.
+
+<br><br>
+
+Thank you for choosing me, Baby.
+
+I promise to keep loving you and making memories with you.
+
+</p>
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+<script>
+
+
+// Open Envelope
+
+function openLetter(){
+
+document.querySelector(".envelope")
+.classList.add("open");
+
+
+setTimeout(function(){
+
+document.querySelector(".envelope").style.display="none";
+
+document.getElementById("mainContent")
+.style.display="block";
+
+
+},1000);
+
+
+}
+
+
+
+
+// Typing Effect
+
+let message =
+"Baby, Happy National Girlfriend Day ❤️ Thank you for choosing me every day. Thank you for staying with me through happy moments and difficult times. Every laugh, every conversation, and every memory with you means so much to me. I love you always.";
+
+
+let i = 0;
+
+
+function typeWriter(){
+
+if(i < message.length){
+
+document.getElementById("typing").innerHTML += message.charAt(i);
+
+i++;
+
+setTimeout(typeWriter,40);
+
+}
+
+}
+
+
+typeWriter();
+
+
+
+
+
+// Falling Hearts
+
+function createHeart(){
+
+let heart=document.createElement("div");
+
+heart.className="heart";
+
+heart.innerHTML="❤️";
+
+heart.style.left=Math.random()*100+"vw";
+
+heart.style.fontSize=
+(Math.random()*25+15)+"px";
+
+
+heart.style.animationDuration=
+(Math.random()*3+3)+"s";
+
+
+document.body.appendChild(heart);
+
+
+setTimeout(()=>{
+
+heart.remove();
+
+},6000);
+
+
+}
+
+
+setInterval(createHeart,300);
+
+
+
+
+
+// Timer
+
+let startDate = new Date("2025-01-01");
+
+
+setInterval(()=>{
+
+
+let now = new Date();
+
+
+let days =
+Math.floor((now-startDate)/(1000*60*60*24));
+
+
+document.getElementById("timer").innerHTML =
+days + " days of loving each other ❤️";
+
+
+},1000);
+
+
+
+
+
+// No Button Runs Away
+
+function moveNo(){
+
+
+let button=document.getElementById("noBtn");
+
+
+let x=Math.random()*300-150;
+
+let y=Math.random()*200-100;
+
+
+button.style.transform =
+"translate("+x+"px,"+y+"px)";
+
+
+}
+
+
+
+
+
+// Yes Button
+
+function yesAnswer(){
+
+
+document.getElementById("finalMessage")
+.style.display="block";
+
+
+for(let i=0;i<50;i++){
+
+createHeart();
+
+}
+
+
+}
+
+
+</script>
+
+
 </body>
+
 </html>
