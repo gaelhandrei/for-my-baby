@@ -38,26 +38,19 @@ let message =
 
 My Baby,
 
+
+
 Happy National Girlfriend Day. ❤️
 
 Thank you for always choosing me, every single day.
-
 Thank you for staying by my side through the good days and even the hard ones. Thank you for loving me, understanding me, and never giving up on us.
-
 Every smile, every laugh, every hug, and every memory we've made together means so much to me. I'll always treasure every moment with you.
-
 You're my safe place, my happiness, and the best thing that's ever happened to me. You're my beautiful baby... my glorious queen.
-
 No matter what happen, I'll always love you and appreciate you with all my heart.
-
 I love you more than words could ever explain, and I'll keep loving you every single day.
-
 Happy National Girlfriend Day, baby. ❤️
-
 Forever yours,
-Your glorious king.
-
-
+Your glorious king 👑;
 
 let index = 0;
 
