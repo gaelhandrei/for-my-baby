@@ -1,79 +1,218 @@
-.letter{
-  width:90%;
-  max-width:700px;
-  margin:50px auto;
-  padding:30px;
-  background:rgba(255,255,255,.9);
-  border-radius:20px;
-  box-shadow:0 10px 30px rgba(0,0,0,.15);
+body {
+
+margin:0;
+
+font-family:Arial, sans-serif;
+
+background:linear-gradient(135deg,#ffb6c1,#ffe4ec);
+
+text-align:center;
+
+color:#6b1e35;
+
+overflow-x:hidden;
+
 }
 
-#typing{
-  font-size:20px;
-  line-height:1.8;
-  white-space:pre-wrap;
+
+
+/* Envelope */
+
+.envelope {
+
+width:260px;
+
+height:170px;
+
+background:#ff6f91;
+
+margin:120px auto;
+
+position:relative;
+
+cursor:pointer;
+
+border-radius:15px;
+
 }
 
-#typing::after{
-  content:"|";
-  animation:blink .8s infinite;
-}
 
-@keyframes blink{
-  50%{
-    opacity:0;
-
-    .envelope {
-    width: 250px;
-    height: 160px;
-    background: #ff6f91;
-    margin: 100px auto;
-    position: relative;
-    cursor: pointer;
-    border-radius: 10px;
-}
 
 .flap {
-    position:absolute;
-    width:0;
-    height:0;
-    border-left:125px solid transparent;
-    border-right:125px solid transparent;
-    border-top:90px solid #ff4f81;
-    top:0;
+
+position:absolute;
+
+width:0;
+
+height:0;
+
+border-left:130px solid transparent;
+
+border-right:130px solid transparent;
+
+border-top:100px solid #ff4f81;
+
 }
+
+
+
 
 .letter {
-    background:white;
-    width:220px;
-    height:140px;
-    position:absolute;
-    left:15px;
-    top:20px;
-    border-radius:10px;
-    transition:.8s;
+
+background:white;
+
+width:230px;
+
+height:140px;
+
+position:absolute;
+
+left:15px;
+
+top:20px;
+
+border-radius:10px;
+
+transition:1s;
+
 }
+
+
 
 .envelope:hover .letter {
-    transform:translateY(-80px);
+
+transform:translateY(-50px);
+
 }
+
+
 
 .open .letter {
-    transform:translateY(-150px);
 
-  @keyframes fall{
+transform:translateY(-160px);
 
-from{
+}
+
+
+
+
+/* Content */
+
+#mainContent {
+
+display:none;
+
+}
+
+
+
+.card {
+
+background:rgba(255,255,255,0.85);
+
+padding:25px;
+
+margin:20px auto;
+
+max-width:600px;
+
+border-radius:25px;
+
+box-shadow:0 5px 20px rgba(0,0,0,0.15);
+
+}
+
+
+
+
+
+button {
+
+background:#ff4f81;
+
+color:white;
+
+border:none;
+
+padding:15px 25px;
+
+border-radius:30px;
+
+font-size:16px;
+
+cursor:pointer;
+
+margin:10px;
+
+}
+
+
+
+button:hover {
+
+transform:scale(1.1);
+
+}
+
+
+
+
+
+/* Falling Hearts */
+
+.heart {
+
+position:fixed;
+
+top:-20px;
+
+animation:fall linear forwards;
+
+}
+
+
+
+@keyframes fall {
+
+
+from {
+
 transform:translateY(-20px);
+
 opacity:1;
+
 }
 
-to{
+
+to {
+
 transform:translateY(100vh);
+
 opacity:0;
+
+}
+
+
 }
 
 
 
-  }
+
+
+#finalMessage {
+
+display:none;
+
+font-size:20px;
+
+}
+
+
+
+
+
+#noBtn {
+
+position:relative;
+
 }
