@@ -1,4 +1,4 @@
-// Envelope Opening
+// Open Envelope
 
 function openLetter(){
 
@@ -30,11 +30,35 @@ document.getElementById("mainContent")
 
 
 
+
 // Typing Love Letter
 
 
 let message =
-  Hello Baby, Happy National Girlfriend Day <3 Thank you for always choosing me, every single day. Thank you for staying by my side through the good days and even the hard ones. Thank you for loving me, understanding me, and never giving up on us. Every smile, every laugh, every hug, and every memory we have made together means so much to me. I will always treasure every moment with you. You are my safe place, my happiness, and the best thing thats ever happened to me. You are my beautiful baby... my glorious queen I will always choose you, love you, and appreciate you with all my heart. I love you more than words could ever explain baby, and I will keep loving you every single day. Forever yours, Your glorious king<3';
+
+My Baby,
+
+Happy National Girlfriend Day. ❤️
+
+Thank you for always choosing me, every single day.
+
+Thank you for staying by my side through the good days and even the hard ones. Thank you for loving me, understanding me, and never giving up on us.
+
+Every smile, every laugh, every hug, and every memory we've made together means so much to me. I'll always treasure every moment with you.
+
+You're my safe place, my happiness, and the best thing that's ever happened to me. You're my beautiful baby... my glorious queen.
+
+No matter what happen, I'll always love you and appreciate you with all my heart.
+
+I love you more than words could ever explain, and I'll keep loving you every single day.
+
+Happy National Girlfriend Day, baby. ❤️
+
+Forever yours,
+Your glorious king.
+
+
+
 let index = 0;
 
 
@@ -71,7 +95,6 @@ typeWriter();
 
 
 // Falling Hearts
-
 
 function createHeart(){
 
@@ -115,48 +138,6 @@ heart.remove();
 
 
 setInterval(createHeart,300);
-
-
-
-
-
-
-
-
-// Love Timer
-
-// CHANGE THIS DATE
-
-let startDate =
-new Date("2025-01-01");
-
-
-
-setInterval(()=>{
-
-
-let now=new Date();
-
-
-
-let days=Math.floor(
-
-(now-startDate)/(1000*60*60*24)
-
-);
-
-
-
-document.getElementById("timer")
-.innerHTML =
-
-days+" days of loving each other ❤️";
-
-
-
-},1000);
-
-
 
 
 
