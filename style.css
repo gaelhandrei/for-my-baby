@@ -1,0 +1,26 @@
+.letter{
+  width:90%;
+  max-width:700px;
+  margin:50px auto;
+  padding:30px;
+  background:rgba(255,255,255,.9);
+  border-radius:20px;
+  box-shadow:0 10px 30px rgba(0,0,0,.15);
+}
+
+#typing{
+  font-size:20px;
+  line-height:1.8;
+  white-space:pre-wrap;
+}
+
+#typing::after{
+  content:"|";
+  animation:blink .8s infinite;
+}
+
+@keyframes blink{
+  50%{
+    opacity:0;
+  }
+}
